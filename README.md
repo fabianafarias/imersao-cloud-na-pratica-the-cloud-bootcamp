@@ -19,9 +19,8 @@
  
  [ x ] <a href="https://user-images.githubusercontent.com/47903743/231626410-22064c86-c0f8-4bd2-b4a0-9eaf269ad522.png">Aplicação rodando</a>
  
- ### Migrando uma aplicação e seu banco de dados do "on-premises" para uma Arquitetura MultiCloud:
+ ### <a href="https://user-images.githubusercontent.com/47903743/231911512-d4947c1d-a95c-463a-b3b7-5322c6065f8f.png">Migrando uma aplicação e seu banco de dados do "on-premises" para uma Arquitetura MultiCloud</a>
  
- ![Captura de tela_2023-04-13_21-29-22](https://user-images.githubusercontent.com/47903743/231911512-d4947c1d-a95c-463a-b3b7-5322c6065f8f.png)
 
  
  
