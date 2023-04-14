@@ -17,7 +17,13 @@
  
  [ x ] <a href="https://user-images.githubusercontent.com/47903743/231626392-54c69802-63e7-4a0e-b942-04e1b2f64092.png">Fazendo o deployment com Kubernetes</a>
  
- [ x] <a href="https://user-images.githubusercontent.com/47903743/231626410-22064c86-c0f8-4bd2-b4a0-9eaf269ad522.png">Aplicação rodando</a>
+ [ x ] <a href="https://user-images.githubusercontent.com/47903743/231626410-22064c86-c0f8-4bd2-b4a0-9eaf269ad522.png">Aplicação rodando</a>
+ 
+ ### Migrando uma aplicação e seu banco de dados do "on-premises" para uma Arquitetura MultiCloud:
+ 
+ ![Captura de tela_2023-04-13_21-29-22](https://user-images.githubusercontent.com/47903743/231911512-d4947c1d-a95c-463a-b3b7-5322c6065f8f.png)
+
+ 
  
 
 
