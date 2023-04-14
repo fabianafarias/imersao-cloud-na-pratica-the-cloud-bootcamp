@@ -19,7 +19,11 @@
  
  [ x ] <a href="https://user-images.githubusercontent.com/47903743/231626410-22064c86-c0f8-4bd2-b4a0-9eaf269ad522.png">Aplicação rodando</a>
  
- ### <a href="https://user-images.githubusercontent.com/47903743/231911512-d4947c1d-a95c-463a-b3b7-5322c6065f8f.png">Migrando uma aplicação e seu banco de dados do "on-premises" para uma Arquitetura MultiCloud</a>
+ ## Migrando uma aplicação e seu banco de dados do "on-premises" para uma Arquitetura MultiCloud
+ 
+ <a href="https://thecloudbootcamp.notion.site/Passos-para-implementa-o-do-Projeto-Parte-3-47b4cdb7b29147a48d71f9810d5299a6">Passos para implementação do Projeto - Parte 3</a>
+ 
+ [ x ] <a href="https://user-images.githubusercontent.com/47903743/231911512-d4947c1d-a95c-463a-b3b7-5322c6065f8f.png">Visualizando a aplicação completa</a>
  
 
  
