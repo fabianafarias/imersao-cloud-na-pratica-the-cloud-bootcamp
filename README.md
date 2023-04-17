@@ -1,30 +1,21 @@
-# Imersão cloud na prática - The Cloud Bootcamp
+# Projeto Cloud: Rede de Hotéis e Resorts de luxo migra aplicação e dados para a nuvem
 
-## Automatização de processos com Terraform no Google Cloud Platform e no AWS
 
- <a href="https://thecloudbootcamp.notion.site/Passos-para-implementa-o-do-Projeto-Hands-on-Parte-1-0fa8239b50824c318d9a0d2b60851eae">Passos para implementação do Projeto Hands-on - Parte 1</a>
+## Problema
 
-[ x ] <a href="https://user-images.githubusercontent.com/47903743/231542519-334f3ae6-871d-4459-96b5-4c3c7780e95f.png">Criação de banco de dados SQL no GCP</a>
+Durante a pandemia de Covid-19, uma rede de Hotéis e Resorts de luxo precisava identificar hóspedes infectados e armazenar os resultados dos exames para que pudessem ser acessados em todos os setores do hotel. A aplicação foi inicialmente colocada em um data center próprio, mas o aumento do número de hóspedes fez com que o data center não suportasse a demanda, deixando a aplicação lenta e atrasando o check-in.
 
-[ x ] <a href="https://user-images.githubusercontent.com/47903743/231542505-cef273e0-4cb5-4e04-9e35-9d5ee0ef86b9.png">Criação de container no S3 da AWS
-</a>
+## Solução
 
-## Implementação da aplicação com Docker e Kubernetes com Kubernetes Engine
+Para solucionar o problema, o gerente de TI do hotel decidiu migrar para a nuvem, contratando uma consultoria para auxiliar na migração. Com alguns serviços já existentes na Google Cloud Platform, foi definida como servidor de cloud principal.
 
- <a href="https://thecloudbootcamp.notion.site/Passos-para-implementa-o-do-Projeto-Hands-on-Parte-1-0fa8239b50824c318d9a0d2b60851eae">Passos para implementação do Projeto - Parte 2</a>
- 
- [ x ] <a href="https://user-images.githubusercontent.com/47903743/231625863-9071cb62-635a-4625-89ab-4a9034cf743f.png">Criação de container com Docker</a>
- 
- [ x ] <a href="https://user-images.githubusercontent.com/47903743/231626392-54c69802-63e7-4a0e-b942-04e1b2f64092.png">Fazendo o deployment com Kubernetes</a>
- 
- [ x ] <a href="https://user-images.githubusercontent.com/47903743/231626410-22064c86-c0f8-4bd2-b4a0-9eaf269ad522.png">Aplicação rodando</a>
- 
- ## Migrando uma aplicação e seu banco de dados do "on-premises" para uma Arquitetura MultiCloud
- 
- <a href="https://thecloudbootcamp.notion.site/Passos-para-implementa-o-do-Projeto-Parte-3-47b4cdb7b29147a48d71f9810d5299a6">Passos para implementação do Projeto - Parte 3</a>
- 
- [ x ] <a href="https://user-images.githubusercontent.com/47903743/231911512-d4947c1d-a95c-463a-b3b7-5322c6065f8f.png">Visualizando a aplicação completa</a>
- 
+A arquitetura da solução foi desenhada, com a criação de uma VPC como primeiro componente, seguido pela camada de banco de dados no Google Cloud SQL. A aplicação foi modernizada, com a troca de máquinas virtuais por containers. Foi criada uma imagem de Docker com os arquivos da aplicação e armazenamento no repositório Google Container Registry. A orquestração dos containers foi feita pelo Google Kubernetes Engine(GKE), que possibilita a comunicação da aplicação com o banco de dados no Google Cloud SQL.
+
+O armazenamento dos resultados dos exames foi feito no AWS S3, que já era utilizado para fazer backups, com o objetivo de minimizar os custos. Para automatizar a aplicação, o provisionamento da infraestrutura na multi-cloud foi feito com Terraform de forma 100% automatizada.
+
+### Arquitetura da solução
+
+![arquitetura-da-solucao](https://user-images.githubusercontent.com/47903743/232522139-bfbbfe49-8eb2-4cd4-9441-29a5b1011cd3.png)
 
  
  
