@@ -53,7 +53,7 @@ recommendation and want to proceed to create an access key' e clique em Next.
 
 ### Google Cloud Platform (GCP)
 
-- [ ] CLIQUE AQUI para baixar os arquivos do projeto hands-on.(anexar mission.zip)
+- [ ] <a href="https://github.com/fabianafarias/imersao-cloud-na-pratica-the-cloud-bootcamp/files/11255477/mission1.zip">CLIQUE AQUI</a> para baixar os arquivos do projeto hands-on.
 - [ ] Acessar a console da GCP e abrir o Cloud Shell
 - [ ] Fazer o upload dos arquivos accessKeys.csv e mission1.zip para o Cloud Shell
 - [ ] Após fazer o upload, executar os comandos de preparação dos arquivos:
@@ -379,7 +379,15 @@ system-pdf-pt-xxxx
 
 - [ ] Testar a aplicação. Ao testar a aplicação e navegar na opção "Ver registros" você deverá ser capaz de visualizar os dados importados!
 
-## Parabéns! Você migrou uma aplicação e seu banco de dados do "on-premises" para uma Arquitetura MultiCloud!
+&nbsp; 
+  
+  ![gif-parabens](https://media.giphy.com/media/SITBfZCDrnsb0qQidj/giphy.gif)
+
+&nbsp;
+
+# Parabéns!
+
+### Você migrou uma aplicação e seu banco de dados do "on-premises" para uma Arquitetura MultiCloud!
 
 
 
