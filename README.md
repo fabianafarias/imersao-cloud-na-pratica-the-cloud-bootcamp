@@ -74,10 +74,10 @@ directly.
 ![17-abrir-cloud-shell](https://user-images.githubusercontent.com/47903743/232873406-ae436c05-7839-446d-a770-dbbc4c1b2cc0.png)
 - [x] Fazer o upload dos arquivos accessKeys.csv e mission1.zip para o Cloud Shell
 <div>
-<img width="200px" height=200px" src="https://user-images.githubusercontent.com/47903743/232873457-2739fed8-41ed-4cb9-aa02-520eeb750ff1.png" />
-<img width="200px" height=200px" src="https://user-images.githubusercontent.com/47903743/232873991-f1a12b51-9877-4954-a35f-b8bac42d99a9.png" />
-<img width="200px" height=200px" src="https://user-images.githubusercontent.com/47903743/232873989-23f2cd90-0af6-47c8-b8c4-8b988dded5b4.png" />
-<img width="200px" height=200px" src="https://user-images.githubusercontent.com/47903743/232873984-5d784467-1275-413e-b115-bcf11fd0226e.png" />
+<img width="500px" src="https://user-images.githubusercontent.com/47903743/232873457-2739fed8-41ed-4cb9-aa02-520eeb750ff1.png" />
+<img width="500px" src="https://user-images.githubusercontent.com/47903743/232873991-f1a12b51-9877-4954-a35f-b8bac42d99a9.png" />
+<img width="500px" src="https://user-images.githubusercontent.com/47903743/232873989-23f2cd90-0af6-47c8-b8c4-8b988dded5b4.png" />
+<img width="500px" src="https://user-images.githubusercontent.com/47903743/232873984-5d784467-1275-413e-b115-bcf11fd0226e.png" />
 </div>
 
 - [x] Após fazer o upload, executar os comandos de preparação dos arquivos:
@@ -156,7 +156,6 @@ para um exclusivo (na AWS, os buckets precisam ter nomes únicos).
 - [x] Execute os seguintes comandos para provisionar os recursos de infraestrutura
   
 <div style="margin: 8px 20px 0;">
-  ![3-clique-em-add-user](https://user-images.githubusercontent.com/47903743/232871589-2cb6bb98-a7d3-4cd5-9985-905793c3d5ff.png)
 
 ```bash
 
