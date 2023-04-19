@@ -28,7 +28,7 @@ O armazenamento dos resultados dos exames foi feito no AWS S3, que já era utili
 
 # Implementação do Projeto em três fases
 
-## 1 - Implementação do projeto no Google Cloud Platform e no AWS com Terraform
+## 1 - Provisionamento do projeto no Google Cloud Platform e no AWS com Terraform
 
 ### Amazon Web Services (AWS)
 
@@ -205,51 +205,55 @@ terraform apply
 PS: Para ambientes de produção, é recomendado utilizar apenas a Rede Privada
 para o acesso ao banco de dados
 
-## Implementação da aplicação com Docker e Kubernetes com Kubernetes Engine
+## 2 - Implementação da aplicação com Docker e Kubernetes
 
 ### Amazon Web Services
-- [ ] Acessar a console da AWS. Na barra de pesquisas, digite IAM. Na seção
+- [x] Acessar a console da AWS. Na barra de pesquisas, digite IAM. Na seção
 Services, clique em IAM.
-- [ ] Clique em Add user, insira o nome luxxy-covid-testing-system-pt-app1 e
+![1-IAM](https://user-images.githubusercontent.com/47903743/232939333-d96534da-d1ba-4094-88ef-38f1cd534560.png)
+- [x] Clique em Add user, insira o nome luxxy-covid-testing-system-pt-app1 e
 clique em Next para criar o usuário do tipo programmatic.
-- [ ] Após avançar, em Set permissions, clique no botão Attach existing policies directly.
-- [ ] Digite AmazonS3FullAccess em Filter distributions by text, property or
-value e aperte Enter.
-- [ ] Selecione AmazonS3FullAccess e clique em Next
-- [ ] Revise todos os detalhes
-- [ ] Clique em Create user
-
+![2-ADD-USER](https://user-images.githubusercontent.com/47903743/232939425-ff820afe-90f5-4a38-bb5d-a7d2220f8204.png)
+- [x] Após avançar, em Set permissions, clique no botão Attach existing policies directly.
+![3-atach](https://user-images.githubusercontent.com/47903743/232939518-be095e1b-ad6f-4eeb-a6b9-326939a1367c.png)
+- [x] Em Permissions policies, busque por AmazonS3FullAccess, selecione-o e clique em next.
+![4-AmazonS3FullAccess](https://user-images.githubusercontent.com/47903743/232939797-c3919d49-91f7-43f1-a70c-4ef8e29d31e8.png)
+- [x] Revise todos os detalhes e clique em Create user
+![6-revise-create](https://user-images.githubusercontent.com/47903743/232939902-722a4ce4-771c-40e4-a281-753d3c5b349c.png)
 Passos para fazer o download da chave de acesso
-- [ ] Acesse o usuário luxxy-covid-testing-system-pt-app1
-- [ ] Clique em Security credentials
-- [ ] Navegue até a seção Access keys
-- [ ] Clique em Create access key
-- [ ] Selecione Command Line Interface (CLI) e I understand the above
-recommendation and want to proceed to create an access key e clique em Next
-- [ ] Clique em Create access key
-- [ ] Clique em Download .csv file.
-- [ ] Após o download finalizar, clique em Done.
-- [ ] Com o download feito, renomeie o .csv para accessKeys.csv
+- [x] Acesse o usuário luxxy-covid-testing-system-pt-app1 e crie uma access key, como foi feito anteriormente.
+![5-acesse-luxxy-covid-testing-system-pt-app1](https://user-images.githubusercontent.com/47903743/232940019-37bc4811-18a9-48da-8fc5-4ee625a968f1.png)
+
 
 ### Google Cloud Platform (GCP)
-- [ ] Navegue até a Cloud SQL instance e crie um novo usuário app com a senha
-welcome123456 no Cloud SQL MySQL database.
-- [ ] Se conecte ao Google Cloud Shell
-- [ ] Faça o download dos arquivos da missão 2 diretamente para o Cloud Shell
-usando o comando wget abaixo:
+- [x] Navegue até a Cloud SQL instance e crie um novo usuário app com a senha welcome123456 no Cloud SQL MySQL database.
+<div>
+<img width="300px" src="https://user-images.githubusercontent.com/47903743/232940094-37460089-45da-4945-842c-37874abe08bc.png" />
+<img width="300px" src="https://user-images.githubusercontent.com/47903743/232940336-de25f23e-1730-43ea-804f-487d69a50ef8.png" />
+<img width="300px" src="https://user-images.githubusercontent.com/47903743/232940441-22a65554-c9ce-425b-a4d0-025fd3b81830.png" />
+</div>
+
+- [x] Se conecte ao Google Cloud Shell
+- [x] Faça o download dos arquivos da missão 2 diretamente para o Cloud Shell usando o comando wget abaixo:
 
 <div style="margin: 8px 20px 0;">
   
 ```bash
 
-cd mkdir mission2_pt cd mission2_pt wget https://tcb-public-events.s3.amazonaws.com/icp/mission2.zip unzip mission2.zip
+cd 
+mkdir mission2_pt
+cd mission2_pt
+wget https://tcb-public-events.s3.amazonaws.com/icp/mission2.zip
+unzip mission2.zip
 
 ```
 </div>
 
+![14-download-mission2](https://user-images.githubusercontent.com/47903743/232940928-ad4240e9-85fd-40f7-bf79-be14af718af2.png)
 
-- [ ] Conecte ao MySQL DB em execução no Cloud SQL (assim que aparecer a
-janela para colocar a senha, insira welcome123456)
+
+
+- [x] Conecte ao MySQL DB em execução no Cloud SQL (assim que aparecer a janela para colocar a senha, insira welcome123456)
 
 <div style="margin: 8px 20px 0;">
   
@@ -260,8 +264,10 @@ mysql --host=<public_ip_cloudsql> --port=3306 -u app -p
 ```
 </div>
 
-- [ ] Após estar conectado ao banco de dados da instância, crie a tabela de
-produtos para testes.
+![15-conecte-mysql](https://user-images.githubusercontent.com/47903743/232940999-1068546f-623a-4cc8-ac0c-1992b020044a.png)
+
+
+- [x] Após estar conectado ao banco de dados da instância, crie a tabela de produtos para testes.
 
 <div style="margin: 8px 20px 0;">
   
@@ -275,35 +281,40 @@ exit;
 ```
 </div>
 
-- [ ] Habilite a Cloud Build API através do Cloud Shell.
+![17-criar-tabela](https://user-images.githubusercontent.com/47903743/232941049-fc68bc15-e352-48c0-9241-30d47c3a974d.png)
+
+
+- [x] Habilite a Cloud Build API através do Cloud Shell.
 
 <div style="margin: 8px 20px 0;">
   
 ```bash
 
-cloudbuild.googleapis.com
+gcloud services enable cloudbuild.googleapis.com
 
 ```
 </div>
 
-- [ ] Faça o Build da Docker image e suba para o Google Container Registry. Por
-gentileza, substitua o <PROJECT_ID> com o My First Project ID
+![18-habilite-cloud-build-api](https://user-images.githubusercontent.com/47903743/232941091-0a83b65d-7044-4ed7-b511-c4f695e252f4.png)
+
+
+- [x] Faça o Build da Docker image e suba para o Google Container Registry. Por gentileza, substitua o <PROJECT_ID> com o My First Project ID
 
 <div style="margin: 8px 20px 0;">
   
 ```bash
 
-cd ~/mission2_pt/mission2/pt/app gcloud builds submit --tag
-gcr.io/<PROJECT_ID>/luxxy-covid-testing-system-app-pt
+cd ~/mission2_pt/mission2/pt/app
+gcloud builds submit --tag gcr.io/<PROJECT_ID>/luxxy-covid-testing-system-app-pt
 
 ```
 </div>
 
+![19-build-docker-img](https://user-images.githubusercontent.com/47903743/232941157-c14cfdc3-f7b9-4537-9f27-5af7995a45e1.png)
 
-- [ ] Abra o Cloud Editor e edite o Kubernetes deployment file (luxxy-covid-testing-
-system.yaml) e atualize as variáveis abaixo (em vermelho) com o seu
-<PROJECT_ID> no caminho da imagem Docker no Google Container Registry,
-AWS Bucket, AWS Keys (do arquivo luxxy-covid-testing-system-pt-app1.csv) e
+
+- [x] Abra o Cloud Editor e edite o Kubernetes deployment file (luxxy-covid-testing-system.yaml) e atualize as variáveis abaixo (em vermelho) com o seu
+<PROJECT_ID> no caminho da imagem Docker no Google Container Registry, AWS Bucket, AWS Keys (do arquivo luxxy-covid-testing-system-pt-app1.csv) e
 o IP Privado do Cloud SQL Database.
 
 <div style="margin: 8px 20px 0;">
@@ -320,24 +331,41 @@ system-pdf-pt-xxxx" - name: S3_ACCESS_KEY value:
 ```
 </div>
 
+![26-arquivo-alterado](https://user-images.githubusercontent.com/47903743/232941260-a3fb404a-3b69-4860-9bd4-0b42ac9146aa.png)
 
-- [ ] Se conecte ao GKE (Google Kubernetes Engine) cluster via Console (seguir
-video)
-- [ ] Faça o Deploy da aplicação COVID-19 Testing Status System no Cluster
+
+- [x] Se conecte ao GKE (Google Kubernetes Engine) cluster via Console
+
+<div>
+<img width="300px" src="https://user-images.githubusercontent.com/47903743/232941971-7245fecb-7490-45e3-999f-4f197504bb48.png" />
+<img width="300px" src="https://user-images.githubusercontent.com/47903743/232941978-06750d19-d1cb-4bf9-a90a-8e1c99142ea5.png" />
+</div>
+
+- [x] Faça o Deploy da aplicação COVID-19 Testing Status System no Cluster
 
 <div style="margin: 8px 20px 0;">
   
 ```bash
 
-cd ~/mission2_pt/mission2/pt/kubernetes kubectl apply -f luxxy-
-covid-testing-system.yaml
+cd ~/mission2_pt/mission2/pt/kubernetes
+kubectl apply -f luxxy-covid-testing-system.yaml
 
 ```
 </div>
 
-- [ ] Obtenha o IP Público e faça o teste da aplicação (CLIQUE AQUI para baixar
-exemplo de Teste de COVID-19)
-- [ ] Você deve visualizar a aplicação up & running! Congrats!
+<div>
+<img width="300px" src="https://user-images.githubusercontent.com/47903743/232942326-890a3467-f9a5-4c5c-9fb5-f86a619ac43e.png" />
+<img width="300px" src="https://user-images.githubusercontent.com/47903743/232942336-d9ad2c08-6293-4def-bfed-8ce7a1bba138.png" />
+<img width="300px" src="https://user-images.githubusercontent.com/47903743/232942338-2191bb2c-2230-425f-a889-175a8183b839.png" />
+</div>
+
+
+- [x] Obtenha o IP Público e faça o teste da aplicação
+![33-endpoint](https://user-images.githubusercontent.com/47903743/232942692-00a77612-e738-4b1a-8fd5-cc8f74811ef0.png)
+
+- [x] Você deve visualizar a aplicação up & running! Congrats!
+![34-aplicacao-rodando](https://user-images.githubusercontent.com/47903743/232942800-a92f4021-b889-45e1-8e73-2c4e9b3f73c2.png)
+
 
 __
 
@@ -365,34 +393,53 @@ ou gcs. Selecione Storage Admin (Full control of GCS resources);
  ## Migrando uma aplicação e seu banco de dados do "on-premises" para uma Arquitetura MultiCloud
 
 ### Google Cloud Platform - Passos para Migração do Banco de Dados MySQL
-- [ ] Conectar ao Google Cloud Shell
-- [ ] Download o dump do banco de dados
+- [x] Conectar ao Google Cloud Shell
+- [x] Download o dump do banco de dados
 
 <div style="margin: 8px 20px 0;">
   
 ```bash
 
-cd mkdir mission3_pt cd mission3_pt wget https://tcb-public-
-events.s3.amazonaws.com/icp/mission3.zip unzip mission3.zip
+cd mkdir mission3
+cd mission3
+wget https://tcb-public-events.s3.amazonaws.com/icp/mission3.zip
+unzip mission3.zip
 
 ```
 </div>
 
 
-- [ ] Conectar ao banco de dados MySQL no Cloud SQL. Senha: welcome123456
+![36-download-dump](https://user-images.githubusercontent.com/47903743/232942968-c0829844-6bdb-4c5e-876c-3b07b5c53e59.png)
+
+- [x] Conectar ao banco de dados MySQL no Cloud SQL. Senha: welcome123456
+  
+  <div style="margin: 8px 20px 0;">
+  
+```bash
+
 mysql --host=<public_ip_address> --port=3306 -u app -p
-- [ ] Importar o dump do banco de dados no Cloud SQL
+
+```
+</div>
+
+![37-conectando-bd](https://user-images.githubusercontent.com/47903743/232943091-d153f426-2ca7-49bd-bd7c-593e55695aab.png)
+
+
+- [x] Importar o dump do banco de dados no Cloud SQL
 
 <div style="margin: 8px 20px 0;">
   
 ```bash
 
-use dbcovidtesting; source ~/mission3_pt/mission3/pt/db/db_dump.sql
+use dbcovidtesting;
+source ~/mission3/pt/db/db_dump.sql
 
 ```
 </div>
 
-- [ ] Checar se os dados foram importados com sucesso
+![38-importar-dump](https://user-images.githubusercontent.com/47903743/232943137-be1b203a-761a-45d1-ae67-43e10f00dd7d.png)
+
+- [x] Checar se os dados foram importados com sucesso
 
 <div style="margin: 8px 20px 0;">
   
@@ -404,35 +451,53 @@ exit;
 ```
 </div>
 
+![39-checar-dados](https://user-images.githubusercontent.com/47903743/232943213-ebaf6154-97e1-4796-a122-9514a590121d.png)
+![40-resultados-no-sql](https://user-images.githubusercontent.com/47903743/232943259-6796d8c7-4919-435d-98a1-cf938d8fc965.png)
+
+
 ### Amazon Web Services - Passos para a Migração dos arquivos PDF
-- [ ] Conectar no AWS Cloud Shell
-- [ ] Download dos arquivos PDF (Comprovante de teste negativo escaneado em
-PDF)
+- [x] Conectar no AWS Cloud Shell
+![43-abrir-cloud-shell](https://user-images.githubusercontent.com/47903743/232943316-b0068bab-479e-4e11-9d90-e12a0e1b1bc0.png)
+
+
+- [x] Download dos arquivos PDF (Comprovante de teste negativo escaneado em PDF)
+
 
 <div style="margin: 8px 20px 0;">
   
 ```bash
 
-mkdir mission3_pt cd mission3_pt wget https://tcb-public-
-events.s3.amazonaws.com/icp/mission3.zip unzip mission3.zip
+mkdir mission3_pt
+cd mission3_pt
+wget https://tcb-public-events.s3.amazonaws.com/icp/mission3.zip
+unzip mission3.zip
 
 ```
 </div>
 
-- [ ] Sincronizar os arquivos PDF com o seu bucket criado no AWS S3 usado para o COVID-19 Testing Status System. Altere o nome do bucket para o seu
+![44-colar-comandos-cs](https://user-images.githubusercontent.com/47903743/232943540-c4e9040a-8db2-47e3-9482-b971511f009b.png)
+![45-arquivos-descompactados](https://user-images.githubusercontent.com/47903743/232943546-8b7b9de2-0c25-4b5c-9592-91b056bfe058.png)
+
+
+- [x] Sincronizar os arquivos PDF com o seu bucket criado no AWS S3 usado para o COVID-19 Testing Status System. Altere o nome do bucket para o seu
 bucket.
 
 <div style="margin: 8px 20px 0;">
   
 ```bash
 
-cd mission3/pt/pdf_files aws s3 sync . s3://luxxy-covid-testing-
-system-pdf-pt-xxxx
+cd mission3/pt/pdf_files
+aws s3 sync . s3://luxxy-covid-testing-system-pdf-pt-xxxx
 
 ```
 </div>
 
-- [ ] Testar a aplicação. Ao testar a aplicação e navegar na opção "Ver registros" você deverá ser capaz de visualizar os dados importados!
+![46-sincronizar-pdf-bucket](https://user-images.githubusercontent.com/47903743/232943588-5533f3d0-e819-4fbd-95e0-8e86e460592e.png)
+
+
+- [x] Testar a aplicação. Ao testar a aplicação e navegar na opção "Ver registros" você deverá ser capaz de visualizar os dados importados!
+![48-pdf-visivel-aplicacao](https://user-images.githubusercontent.com/47903743/232943682-27d71c05-86e8-40ee-b915-e93a9086d21a.png)
+
 
 &nbsp; 
   
@@ -440,12 +505,66 @@ system-pdf-pt-xxxx
 
 &nbsp;
 
-# Parabéns!
+# Parabéns!🎉
 
 ### Você migrou uma aplicação e seu banco de dados do "on-premises" para uma Arquitetura MultiCloud!
 
+&nbsp; 
+
+### Como deletar os recursos dos múltiplos provedores de Cloud
+
+**Primeiro passo - Excluir todos os objetos do bucket**
+
+- Acesse a Console da AWS e abra o serviço do S3.
+- Selecione o seu bucket e clique em Empty.
+- Para confirmar a exclusão dos objetos, digite *permanently delete*.
+- Clique em Empty.
+
+**Primeiro passo concluído!**
+
+**Segundo passo - Atualize o instance deletion_protection de true para false**
+
+- Abra o arquivo tcb_gcp_database.tf disponível no diretório ~/mission1_pt/mission1/pt/terraform/ usando o Google Editor.
+- Na linha 11 do arquivo tcb_gcp_database.tf:
+    - Atualize de deletion_protection = “true” para deletion_protection = “false”
+    **Example:**
+        - Versão atual: deletion_protection = "true”
+        - Versão atualizada: deletion_protection = "false”
+        
+- Mude do Editor para Terminal
+- Execute os comandos para aplicar as mudanças feitas no arquivo do Terraform:
+
+<div style="margin: 8px 20px 0;">
+  
+```bash
+
+cd ~/mission1_pt/mission1/pt/terraform/
+terraform apply
+
+```
+</dev>
+
+***Digite o valor: yes***
+
+Agora, você está pronto para excluir todos os recursos com o terraform destroy. 🚀
+
+- Execute o comando abaixo:
+  
+<div style="margin: 8px 20px 0;">
+  
+```bash
+
+terraform destroy
+
+```
+</dev>
+
+***Digite o valor: yes***
+
+![49-destroyed](https://user-images.githubusercontent.com/47903743/232943750-ada78cfd-c6da-439f-9488-72811168180a.png)
 
 
+Muito show! Após alguns minutos, todos os recursos estarão excluídos dos múltiplos provedores de Cloud! 🚀✅
 
 
 
