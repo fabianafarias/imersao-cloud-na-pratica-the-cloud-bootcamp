@@ -56,7 +56,7 @@ O armazenamento dos resultados dos exames foi feito no AWS S3, que já era utili
 
 - [x] Insira o nome terraform-pt-1 e clique em Next para criar o usuário do tipo programmatic.
 <div>
-< img src="https://user-images.githubusercontent.com/47903743/232872274-67cd9312-576b-4447-8a0a-d0245ca1f6a7.png" />
+<img src="https://user-images.githubusercontent.com/47903743/232872274-67cd9312-576b-4447-8a0a-d0245ca1f6a7.png" />
 </div>
 
 &nbsp; 
@@ -64,56 +64,56 @@ O armazenamento dos resultados dos exames foi feito no AWS S3, que já era utili
 - [x] Após avançar, em Set permissions/Permissions options, clique no botão Attach existing policies
 directly.
 <div>
-< img src="https://user-images.githubusercontent.com/47903743/232872345-ae36b424-32da-4aac-84b9-b869cab25096.png" />
+<img src="https://user-images.githubusercontent.com/47903743/232872345-ae36b424-32da-4aac-84b9-b869cab25096.png" />
 </div>
 
 &nbsp; 
 
 - [x] Na barra de busca em Permissions policies busque por AmazonS3FullAccess.
 <div>
-< img src="https://user-images.githubusercontent.com/47903743/232872386-358182ba-9c9f-4438-ba66-e0917706c703.png" />
+<img src="https://user-images.githubusercontent.com/47903743/232872386-358182ba-9c9f-4438-ba66-e0917706c703.png" />
 </div>
 
 &nbsp; 
 
 - [x] Selecione AmazonS3FullAccess e clique em Next
 <div>
-< img src="https://user-images.githubusercontent.com/47903743/232872444-bc438844-71b7-4e6e-a9f7-b02791cd646c.png" />
+<img src="https://user-images.githubusercontent.com/47903743/232872444-bc438844-71b7-4e6e-a9f7-b02791cd646c.png" />
 </div>
 
 &nbsp; 
 
 - [x] Clique em Create user  
 <div>
-< img src="https://user-images.githubusercontent.com/47903743/232872488-d83d5fbc-f194-41f6-8ca4-c90684789453.png" />
+<img src="https://user-images.githubusercontent.com/47903743/232872488-d83d5fbc-f194-41f6-8ca4-c90684789453.png" />
 </div>
 
 &nbsp; 
 
 - [x] Acesse o usuário terraform-pt-1
 <div>
-< img src="https://user-images.githubusercontent.com/47903743/232872539-324aefab-4a5e-4c01-ab90-84ec7eb4b6b7.png" />
+<img src="https://user-images.githubusercontent.com/47903743/232872539-324aefab-4a5e-4c01-ab90-84ec7eb4b6b7.png" />
 </div>
 
 &nbsp; 
 
 - [x] Clique em Security credentials
 <div>
-< img src="https://user-images.githubusercontent.com/47903743/232872587-4e887b27-f688-4be8-b54e-1678076c7a8d.png" />
+<img src="https://user-images.githubusercontent.com/47903743/232872587-4e887b27-f688-4be8-b54e-1678076c7a8d.png" />
 </div>
 
 &nbsp; 
 
 - [x] Navegue até a seção Access keys e clique em Create access key
 <div>
-< img src="https://user-images.githubusercontent.com/47903743/232872664-b622a2a8-a067-4049-aebd-320e8b29e2b0.png" />
+<img src="https://user-images.githubusercontent.com/47903743/232872664-b622a2a8-a067-4049-aebd-320e8b29e2b0.png" />
 </div>
 
 &nbsp; 
 
 - [x] Selecione Command Line Interface (CLI) e 'I understand the above recommendation and want to proceed to create an access key' e clique em Next.
 <div>
-< img src="https://user-images.githubusercontent.com/47903743/232872707-8e846e64-4dfe-42a8-864c-143607228139.png" />
+<img src="https://user-images.githubusercontent.com/47903743/232872707-8e846e64-4dfe-42a8-864c-143607228139.png" />
 </div>
 
 &nbsp; 
@@ -755,14 +755,13 @@ unzip mission3.zip
 
 ```  
 </div>
-    
+
+&nbsp;    
     <div>
    <img src="https://user-images.githubusercontent.com/47903743/232943540-c4e9040a-8db2-47e3-9482-b971511f009b.png" />
-  </div> 
+  </div>
 
-
-&nbsp;
-    
+&nbsp;    
     <div>
    <img src="https://user-images.githubusercontent.com/47903743/232943546-8b7b9de2-0c25-4b5c-9592-91b056bfe058.png" />
   </div> 
@@ -782,8 +781,10 @@ aws s3 sync . s3://luxxy-covid-testing-system-pdf-pt-xxxx
 
   ```  
 </div>
+
+&nbsp;
     
-<div>
+    <div>
   <img src="https://user-images.githubusercontent.com/47903743/232943588-5533f3d0-e819-4fbd-95e0-8e86e460592e.png" />
     </div>
 
@@ -796,9 +797,7 @@ aws s3 sync . s3://luxxy-covid-testing-system-pdf-pt-xxxx
     </div>
 
 &nbsp;
-
-
-&nbsp; 
+    
     
     <div>
   ![gif-parabens](https://media.giphy.com/media/SITBfZCDrnsb0qQidj/giphy.gif)
@@ -844,9 +843,10 @@ aws s3 sync . s3://luxxy-covid-testing-system-pdf-pt-xxxx
 cd ~/mission1_pt/mission1/pt/terraform/
 terraform apply
 
-```
-  
+```  
 </div>
+
+&nbsp;
 
 ***Digite o valor: yes***
 
@@ -860,20 +860,20 @@ Agora, você está pronto para excluir todos os recursos com o terraform destroy
 
 terraform destroy
 
-```
-  
+```  
 </div>
 
-***Digite o valor: yes***
-    
-    <div>
+***Digite o valor: yes*** 
+
+   <div>
       <img src="https://user-images.githubusercontent.com/47903743/232943750-ada78cfd-c6da-439f-9488-72811168180a.png" />
     </div>
+  
 
 &nbsp;
 
 
-Muito show! Após alguns minutos, todos os recursos estarão excluídos dos múltiplos provedores de Cloud! 🚀✅
+Pronto! Após alguns minutos, todos os recursos estarão excluídos dos múltiplos provedores de Cloud! 🚀✅
 
 
 
