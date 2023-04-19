@@ -319,37 +319,51 @@ terraform apply
 &nbsp;
   
 - [x] Na lateral direita, em Primary Instance, clique em “Connections”.
-![36-clicar-connections](https://user-images.githubusercontent.com/47903743/232877959-7a2e6e02-098c-4dfb-8b50-4667f08b06df.png)
+<div>
+<img src="https://user-images.githubusercontent.com/47903743/232877959-7a2e6e02-098c-4dfb-8b50-4667f08b06df.png" />
+</div>
 
 &nbsp;
   
 - [x] Em Instance IP assignment, habilite o Private IP. Em Associated Network, selecione “Default”.
-![37-ativa-privateip-e-network-default](https://user-images.githubusercontent.com/47903743/232878036-8f02e555-e313-428b-891c-1a953e28c409.png)
+  <div>
+<img src="https://user-images.githubusercontent.com/47903743/232878036-8f02e555-e313-428b-891c-1a953e28c409.png" />
+</div>
 
 &nbsp;
   
 - [x] Clique em Set up connection
-![38-clique-setup-conection](https://user-images.githubusercontent.com/47903743/232878177-7b80d144-a6a0-4bd4-9cf2-ce0b116f6807.png)
+  <div>
+<img src="https://user-images.githubusercontent.com/47903743/232878177-7b80d144-a6a0-4bd4-9cf2-ce0b116f6807.png" />
+</div>
 
 &nbsp;
   
 - [x] Selecione Enable Service Networking API (se solicitar)
-![39-clique-enable](https://user-images.githubusercontent.com/47903743/232878236-a456d1ee-4b96-4832-a93d-745e39c59502.png)
+ <div>
+<img src="https://user-images.githubusercontent.com/47903743/232878236-a456d1ee-4b96-4832-a93d-745e39c59502.png" />
+</div>
 
 &nbsp;
   
 - [x] Selecione Use an automatically allocated IP range in your network e clique em Continue.
-![40-use-automatic-api](https://user-images.githubusercontent.com/47903743/232878422-330c6e58-0e6d-432e-a30f-c75a92b1ca03.png)
+  <div>
+<img src="https://user-images.githubusercontent.com/47903743/232878422-330c6e58-0e6d-432e-a30f-c75a92b1ca03.png" />
+</div>
 
 &nbsp;
   
 - [x] Clique em Create connection e aguarde alguns minutos.
-![41-create-connection](https://user-images.githubusercontent.com/47903743/232878522-587a6337-3221-4a2b-9dca-83e09b676cf0.png)
+<div>
+<img src="https://user-images.githubusercontent.com/47903743/232878522-587a6337-3221-4a2b-9dca-83e09b676cf0.png" />
+</div>
 
 &nbsp;
   
 - [x] Após finalizar, em “Connections”, Autorized Networks, clique em "Adicionar Rede (Add Network)".
-![43-add-network](https://user-images.githubusercontent.com/47903743/232878632-3babbb6c-c1be-494c-9b4e-faea971feedd.png)
+  <div>
+<img src="https://user-images.githubusercontent.com/47903743/232878632-3babbb6c-c1be-494c-9b4e-faea971feedd.png" />
+</div>
 
 &nbsp;
   
@@ -358,12 +372,17 @@ terraform apply
 - Network: 0.0.0.0/0
 - Clique em Done.
   
-![44-nome-network-done](https://user-images.githubusercontent.com/47903743/232878810-900dcf86-1e63-4580-b508-5e701364f460.png)
+ <div>
+<img src="https://user-images.githubusercontent.com/47903743/232878810-900dcf86-1e63-4580-b508-5e701364f460.png" />
+</div>
+ 
 
 &nbsp;
 
 - [x] Clique em Save e aguarde finalizar a edição do Cloud SQL Instance.
-![46-concluido](https://user-images.githubusercontent.com/47903743/232882016-17f8a987-d609-4c32-80ab-4b588d6fb771.png)
+  <div>
+<img src="https://user-images.githubusercontent.com/47903743/232882016-17f8a987-d609-4c32-80ab-4b588d6fb771.png" />
+</div>
 
 &nbsp;
 
@@ -373,35 +392,45 @@ para o acesso ao banco de dados
 ## 2 - Implementação da aplicação com Docker e Kubernetes
 
 ### Amazon Web Services
-- [x] Acessar a console da AWS. Na barra de pesquisas, digite IAM. Na seção
-Services, clique em IAM.
-![1-IAM](https://user-images.githubusercontent.com/47903743/232939333-d96534da-d1ba-4094-88ef-38f1cd534560.png)
+- [x] Acessar a console da AWS. Na barra de pesquisas, digite IAM. Na seção Services, clique em IAM.
+  <div>
+<img src="https://user-images.githubusercontent.com/47903743/232939333-d96534da-d1ba-4094-88ef-38f1cd534560.png" />
+</div>
 
 &nbsp;
   
-- [x] Clique em Add user, insira o nome luxxy-covid-testing-system-pt-app1 e
-clique em Next para criar o usuário do tipo programmatic.
-![2-ADD-USER](https://user-images.githubusercontent.com/47903743/232939425-ff820afe-90f5-4a38-bb5d-a7d2220f8204.png)
+- [x] Clique em Add user, insira o nome luxxy-covid-testing-system-pt-app1 e clique em Next para criar o usuário do tipo programmatic.
+<div>
+<img src="https://user-images.githubusercontent.com/47903743/232939425-ff820afe-90f5-4a38-bb5d-a7d2220f8204.png" />
+</div>
 
 &nbsp;
   
 - [x] Após avançar, em Set permissions, clique no botão Attach existing policies directly.
-![3-atach](https://user-images.githubusercontent.com/47903743/232939518-be095e1b-ad6f-4eeb-a6b9-326939a1367c.png)
+  <div>
+<img src="https://user-images.githubusercontent.com/47903743/232939518-be095e1b-ad6f-4eeb-a6b9-326939a1367c.png" />
+</div>
 
 &nbsp;
   
 - [x] Em Permissions policies, busque por AmazonS3FullAccess, selecione-o e clique em next.
-![4-AmazonS3FullAccess](https://user-images.githubusercontent.com/47903743/232939797-c3919d49-91f7-43f1-a70c-4ef8e29d31e8.png)
+  <div>
+<img src="https://user-images.githubusercontent.com/47903743/232939797-c3919d49-91f7-43f1-a70c-4ef8e29d31e8.png" />
+</div>
 
 &nbsp;
   
 - [x] Revise todos os detalhes e clique em Create user
-![6-revise-create](https://user-images.githubusercontent.com/47903743/232939902-722a4ce4-771c-40e4-a281-753d3c5b349c.png)
+<div>
+<img src="https://user-images.githubusercontent.com/47903743/232939902-722a4ce4-771c-40e4-a281-753d3c5b349c.png" />
+</div>
 
 &nbsp;
   
 - [x] Acesse o usuário luxxy-covid-testing-system-pt-app1 e crie uma access key, como foi feito anteriormente.
-![5-acesse-luxxy-covid-testing-system-pt-app1](https://user-images.githubusercontent.com/47903743/232940019-37bc4811-18a9-48da-8fc5-4ee625a968f1.png)
+<div>
+<img src="https://user-images.githubusercontent.com/47903743/232940019-37bc4811-18a9-48da-8fc5-4ee625a968f1.png" />
+</div>
 
 &nbsp;
 
@@ -431,8 +460,10 @@ unzip mission2.zip
 
 ```
 </div>
-
-![14-download-mission2](https://user-images.githubusercontent.com/47903743/232940928-ad4240e9-85fd-40f7-bf79-be14af718af2.png)
+  
+<div>
+<img src="https://user-images.githubusercontent.com/47903743/232940928-ad4240e9-85fd-40f7-bf79-be14af718af2.png" />
+</div>
 
 &nbsp;
 
@@ -448,7 +479,9 @@ mysql --host=<public_ip_cloudsql> --port=3306 -u app -p
 ```
 </div>
 
-![15-conecte-mysql](https://user-images.githubusercontent.com/47903743/232940999-1068546f-623a-4cc8-ac0c-1992b020044a.png)
+  <div>
+<img src="https://user-images.githubusercontent.com/47903743/232940999-1068546f-623a-4cc8-ac0c-1992b020044a.png" />
+</div>
 
 &nbsp;
 
@@ -466,8 +499,11 @@ exit;
 
 ```
 </div>
+  
+  <div>
+  <img src="https://user-images.githubusercontent.com/47903743/232941049-fc68bc15-e352-48c0-9241-30d47c3a974d.png" />
+  </div>
 
-![17-criar-tabela](https://user-images.githubusercontent.com/47903743/232941049-fc68bc15-e352-48c0-9241-30d47c3a974d.png)
 
 &nbsp;
 
@@ -482,8 +518,11 @@ gcloud services enable cloudbuild.googleapis.com
 
 ```
 </div>
+  
+  <div>
+  <img src="https://user-images.githubusercontent.com/47903743/232941091-0a83b65d-7044-4ed7-b511-c4f695e252f4.png" />
+  </div>
 
-![18-habilite-cloud-build-api](https://user-images.githubusercontent.com/47903743/232941091-0a83b65d-7044-4ed7-b511-c4f695e252f4.png)
 
 &nbsp;
 
@@ -499,8 +538,11 @@ gcloud builds submit --tag gcr.io/<PROJECT_ID>/luxxy-covid-testing-system-app-pt
 
 ```
 </div>
+  
+  <div>
+  <img src="https://user-images.githubusercontent.com/47903743/232941157-c14cfdc3-f7b9-4537-9f27-5af7995a45e1.png" />
+  </div>
 
-![19-build-docker-img](https://user-images.githubusercontent.com/47903743/232941157-c14cfdc3-f7b9-4537-9f27-5af7995a45e1.png)
 
 &nbsp;
 
@@ -522,14 +564,19 @@ system-pdf-pt-xxxx" - name: S3_ACCESS_KEY value:
 
 ```
 </div>
-
-![26-arquivo-alterado](https://user-images.githubusercontent.com/47903743/232941260-a3fb404a-3b69-4860-9bd4-0b42ac9146aa.png)
+  
+  
+  <div>
+  <img src="https://user-images.githubusercontent.com/47903743/232941260-a3fb404a-3b69-4860-9bd4-0b42ac9146aa.png" />
+  </div>
 
 &nbsp;
 
 
 - [x] Se conecte ao GKE (Google Kubernetes Engine) cluster via Console
-<img width="500px" src="https://user-images.githubusercontent.com/47903743/232941971-7245fecb-7490-45e3-999f-4f197504bb48.png" />
+  <div>
+    <img src="https://user-images.githubusercontent.com/47903743/232941971-7245fecb-7490-45e3-999f-4f197504bb48.png" />
+  </div>  
  
 
 &nbsp;
@@ -555,12 +602,16 @@ kubectl apply -f luxxy-covid-testing-system.yaml
 
 
 - [x] Obtenha o IP Público e faça o teste da aplicação
-![33-endpoint](https://user-images.githubusercontent.com/47903743/232942692-00a77612-e738-4b1a-8fd5-cc8f74811ef0.png)
+  <div>
+  <img src="https://user-images.githubusercontent.com/47903743/232942692-00a77612-e738-4b1a-8fd5-cc8f74811ef0.png" />
+  </div>
 
 &nbsp;
 
 - [x] Você deve visualizar a aplicação up & running! Congrats!
-![34-aplicacao-rodando](https://user-images.githubusercontent.com/47903743/232942800-a92f4021-b889-45e1-8e73-2c4e9b3f73c2.png)
+  <div>
+  <img src="https://user-images.githubusercontent.com/47903743/232942800-a92f4021-b889-45e1-8e73-2c4e9b3f73c2.png" />
+  </div>
 
 &nbsp;
 
@@ -606,8 +657,10 @@ unzip mission3.zip
 ```
 </div>
 
-
-![36-download-dump](https://user-images.githubusercontent.com/47903743/232942968-c0829844-6bdb-4c5e-876c-3b07b5c53e59.png)
+<div>
+  <img src="https://user-images.githubusercontent.com/47903743/232942968-c0829844-6bdb-4c5e-876c-3b07b5c53e59.png" />
+ </div>
+  
 
 &nbsp;
 
@@ -621,8 +674,12 @@ mysql --host=<public_ip_address> --port=3306 -u app -p
 
 ```
 </div>
+    
+    
+ <div>
+  <img src="https://user-images.githubusercontent.com/47903743/232943091-d153f426-2ca7-49bd-bd7c-593e55695aab.png" />
+ </div>
 
-![37-conectando-bd](https://user-images.githubusercontent.com/47903743/232943091-d153f426-2ca7-49bd-bd7c-593e55695aab.png)
 
 &nbsp;
 
@@ -637,9 +694,13 @@ use dbcovidtesting;
 source ~/mission3/pt/db/db_dump.sql
 
 ```
+  
 </div>
+    
+  <div>
+  <img src="https://user-images.githubusercontent.com/47903743/232943137-be1b203a-761a-45d1-ae67-43e10f00dd7d.png" />
+ </div>
 
-![38-importar-dump](https://user-images.githubusercontent.com/47903743/232943137-be1b203a-761a-45d1-ae67-43e10f00dd7d.png)
 
 &nbsp;
 
@@ -653,19 +714,29 @@ SELECT * FROM records;
 exit;
 
 ```
+  
 </div>
+    
+ <div>
+   <img src="https://user-images.githubusercontent.com/47903743/232943213-ebaf6154-97e1-4796-a122-9514a590121d.png" />
+  </div>  
 
-![39-checar-dados](https://user-images.githubusercontent.com/47903743/232943213-ebaf6154-97e1-4796-a122-9514a590121d.png)
 
 &nbsp;
-![40-resultados-no-sql](https://user-images.githubusercontent.com/47903743/232943259-6796d8c7-4919-435d-98a1-cf938d8fc965.png)
+
+ <div>
+   <img src="https://user-images.githubusercontent.com/47903743/232943259-6796d8c7-4919-435d-98a1-cf938d8fc965.png" />
+  </div> 
+
 
 &nbsp;
 
 
 ### Amazon Web Services - Passos para a Migração dos arquivos PDF
 - [x] Conectar no AWS Cloud Shell
-![43-abrir-cloud-shell](https://user-images.githubusercontent.com/47903743/232943316-b0068bab-479e-4e11-9d90-e12a0e1b1bc0.png)
+  <div>
+   <img src="https://user-images.githubusercontent.com/47903743/232943316-b0068bab-479e-4e11-9d90-e12a0e1b1bc0.png" />
+  </div> 
 
 &nbsp;
 
@@ -682,13 +753,19 @@ cd mission3_pt
 wget https://tcb-public-events.s3.amazonaws.com/icp/mission3.zip
 unzip mission3.zip
 
-```
+```  
 </div>
+    
+    <div>
+   <img src="https://user-images.githubusercontent.com/47903743/232943540-c4e9040a-8db2-47e3-9482-b971511f009b.png" />
+  </div> 
 
-![44-colar-comandos-cs](https://user-images.githubusercontent.com/47903743/232943540-c4e9040a-8db2-47e3-9482-b971511f009b.png)
 
 &nbsp;
-![45-arquivos-descompactados](https://user-images.githubusercontent.com/47903743/232943546-8b7b9de2-0c25-4b5c-9592-91b056bfe058.png)
+    
+    <div>
+   <img src="https://user-images.githubusercontent.com/47903743/232943546-8b7b9de2-0c25-4b5c-9592-91b056bfe058.png" />
+  </div> 
 
 &nbsp;
 
@@ -703,23 +780,31 @@ bucket.
 cd mission3/pt/pdf_files
 aws s3 sync . s3://luxxy-covid-testing-system-pdf-pt-xxxx
 
-```
+  ```  
 </div>
-
-![46-sincronizar-pdf-bucket](https://user-images.githubusercontent.com/47903743/232943588-5533f3d0-e819-4fbd-95e0-8e86e460592e.png)
+    
+<div>
+  <img src="https://user-images.githubusercontent.com/47903743/232943588-5533f3d0-e819-4fbd-95e0-8e86e460592e.png" />
+    </div>
 
 &nbsp;
 
 
 - [x] Testar a aplicação. Ao testar a aplicação e navegar na opção "Ver registros" você deverá ser capaz de visualizar os dados importados!
-![48-pdf-visivel-aplicacao](https://user-images.githubusercontent.com/47903743/232943682-27d71c05-86e8-40ee-b915-e93a9086d21a.png)
+    <div>
+  <img src="https://user-images.githubusercontent.com/47903743/232943682-27d71c05-86e8-40ee-b915-e93a9086d21a.png" />
+    </div>
 
 &nbsp;
 
 
 &nbsp; 
-  
+    
+    <div>
   ![gif-parabens](https://media.giphy.com/media/SITBfZCDrnsb0qQidj/giphy.gif)
+    </div>
+  
+ 
 
 &nbsp;
 
@@ -760,7 +845,8 @@ cd ~/mission1_pt/mission1/pt/terraform/
 terraform apply
 
 ```
-</dev>
+  
+</div>
 
 ***Digite o valor: yes***
 
@@ -775,11 +861,14 @@ Agora, você está pronto para excluir todos os recursos com o terraform destroy
 terraform destroy
 
 ```
-</dev>
+  
+</div>
 
 ***Digite o valor: yes***
-
-![49-destroyed](https://user-images.githubusercontent.com/47903743/232943750-ada78cfd-c6da-439f-9488-72811168180a.png)
+    
+    <div>
+      <img src="https://user-images.githubusercontent.com/47903743/232943750-ada78cfd-c6da-439f-9488-72811168180a.png" />
+    </div>
 
 &nbsp;
 
