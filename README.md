@@ -5,8 +5,8 @@
 ## Problema
 
 <div>
-<img width="400px" height=400px" src="https://user-images.githubusercontent.com/47903743/232585737-6e05ca63-8ea5-488d-8fe4-e8745e9963e5.png" />
-<img width="400px" height=400px" src="https://user-images.githubusercontent.com/47903743/232590939-19a28e63-19fa-4919-b5c0-f529371527cf.png" />
+<img width="400px" height="400px" src="https://user-images.githubusercontent.com/47903743/232585737-6e05ca63-8ea5-488d-8fe4-e8745e9963e5.png" />
+<img width="400px" height="400px" src="https://user-images.githubusercontent.com/47903743/232590939-19a28e63-19fa-4919-b5c0-f529371527cf.png" />
 </div>
 
 Durante a pandemia de Covid-19, uma rede de Hotéis e Resorts de luxo precisava identificar hóspedes infectados e armazenar os resultados dos exames para que pudessem ser acessados em todos os setores do hotel. A aplicação foi inicialmente colocada em um data center próprio, mas o aumento do número de hóspedes fez com que o data center não suportasse a demanda, deixando a aplicação lenta e atrasando o check-in.
@@ -743,6 +743,16 @@ exit;
 
 - [x] Download dos arquivos PDF (Comprovante de teste negativo escaneado em PDF)
 
+    
+&nbsp;    
+    <div>
+   <img src="https://user-images.githubusercontent.com/47903743/232943540-c4e9040a-8db2-47e3-9482-b971511f009b.png" />
+  </div>
+
+&nbsp;    
+    <div>
+   <img src="https://user-images.githubusercontent.com/47903743/232943546-8b7b9de2-0c25-4b5c-9592-91b056bfe058.png" />
+  </div> 
 
 <div style="margin: 8px 20px 0;">
   
@@ -756,21 +766,17 @@ unzip mission3.zip
 ```  
 </div>
 
-&nbsp;    
-    <div>
-   <img src="https://user-images.githubusercontent.com/47903743/232943540-c4e9040a-8db2-47e3-9482-b971511f009b.png" />
-  </div>
-
-&nbsp;    
-    <div>
-   <img src="https://user-images.githubusercontent.com/47903743/232943546-8b7b9de2-0c25-4b5c-9592-91b056bfe058.png" />
-  </div> 
-
 &nbsp;
 
 
 - [x] Sincronizar os arquivos PDF com o seu bucket criado no AWS S3 usado para o COVID-19 Testing Status System. Altere o nome do bucket para o seu
 bucket.
+    
+    &nbsp;
+    
+    <div>
+  <img src="https://user-images.githubusercontent.com/47903743/232943588-5533f3d0-e819-4fbd-95e0-8e86e460592e.png" />
+    </div>
 
 <div style="margin: 8px 20px 0;">
   
@@ -783,12 +789,6 @@ aws s3 sync . s3://luxxy-covid-testing-system-pdf-pt-xxxx
 </div>
 
 &nbsp;
-    
-    <div>
-  <img src="https://user-images.githubusercontent.com/47903743/232943588-5533f3d0-e819-4fbd-95e0-8e86e460592e.png" />
-    </div>
-
-&nbsp;
 
 
 - [x] Testar a aplicação. Ao testar a aplicação e navegar na opção "Ver registros" você deverá ser capaz de visualizar os dados importados!
@@ -796,18 +796,14 @@ aws s3 sync . s3://luxxy-covid-testing-system-pdf-pt-xxxx
   <img src="https://user-images.githubusercontent.com/47903743/232943682-27d71c05-86e8-40ee-b915-e93a9086d21a.png" />
     </div>
 
-&nbsp;
-    
-    
-    <div>
-  ![gif-parabens](https://media.giphy.com/media/SITBfZCDrnsb0qQidj/giphy.gif)
-    </div>
-  
+&nbsp;    
  
 
-&nbsp;
-
 # Parabéns!🎉
+    
+   <div>
+  ![gif-parabens](https://media.giphy.com/media/SITBfZCDrnsb0qQidj/giphy.gif)
+    </div>
 
 ### Você migrou uma aplicação e seu banco de dados do "on-premises" para uma Arquitetura MultiCloud!
 
