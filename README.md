@@ -20,11 +20,12 @@ A arquitetura da solução foi desenhada, com a criação de uma VPC como primei
 
 O armazenamento dos resultados dos exames foi feito no AWS S3, que já era utilizado para fazer backups, com o objetivo de minimizar os custos. Para automatizar a aplicação, o provisionamento da infraestrutura na multi-cloud foi feito com Terraform de forma 100% automatizada.
 
+
 ### Arquitetura da solução
 
+<div>
 <img width="800px" src="https://user-images.githubusercontent.com/47903743/232522139-bfbbfe49-8eb2-4cd4-9441-29a5b1011cd3.png"/>
-
-
+</div>
 
 # Implementação do Projeto em três fases
 
@@ -33,83 +34,115 @@ O armazenamento dos resultados dos exames foi feito no AWS S3, que já era utili
 ### Amazon Web Services (AWS)
 
 - [x] Acesse a console da AWS e na barra de pesquisas, digite IAM. Na seção Services, clique em IAM.
-![1-buscar-iam](https://user-images.githubusercontent.com/47903743/232870986-6f93a1ed-d3c9-473d-a742-ccbe9ebc1cd5.png)
+<div>
+<img src="https://user-images.githubusercontent.com/47903743/232870986-6f93a1ed-d3c9-473d-a742-ccbe9ebc1cd5.png" />
+</div>
 
 &nbsp; 
 
 - [x] Na seção Access management, clique em Users.
-![2-clicar-em-users](https://user-images.githubusercontent.com/47903743/232871139-8482b349-f170-4b79-a21d-a728585114c0.png)
+<div>
+<img src="https://user-images.githubusercontent.com/47903743/232871139-8482b349-f170-4b79-a21d-a728585114c0.png" />
+</div>
 
 &nbsp; 
 
 - [x] Clique no botão Add users.
-![3-clique-em-add-user](https://user-images.githubusercontent.com/47903743/232872144-bc523b30-75fa-4729-959a-bcc4b5848f61.png)
+<div>
+<img src="https://user-images.githubusercontent.com/47903743/232872144-bc523b30-75fa-4729-959a-bcc4b5848f61.png" />
+</div>
 
 &nbsp; 
 
 - [x] Insira o nome terraform-pt-1 e clique em Next para criar o usuário do tipo programmatic.
-![4-insira-nome-e-clique-next](https://user-images.githubusercontent.com/47903743/232872274-67cd9312-576b-4447-8a0a-d0245ca1f6a7.png)
+<div>
+< img src="https://user-images.githubusercontent.com/47903743/232872274-67cd9312-576b-4447-8a0a-d0245ca1f6a7.png" />
+</div>
 
 &nbsp; 
 
 - [x] Após avançar, em Set permissions/Permissions options, clique no botão Attach existing policies
 directly.
-![5-atach-existing-policies](https://user-images.githubusercontent.com/47903743/232872345-ae36b424-32da-4aac-84b9-b869cab25096.png)
+<div>
+< img src="https://user-images.githubusercontent.com/47903743/232872345-ae36b424-32da-4aac-84b9-b869cab25096.png" />
+</div>
 
 &nbsp; 
 
 - [x] Na barra de busca em Permissions policies busque por AmazonS3FullAccess.
-![6-busque-AmazonS3FullAccess](https://user-images.githubusercontent.com/47903743/232872386-358182ba-9c9f-4438-ba66-e0917706c703.png)
+<div>
+< img src="https://user-images.githubusercontent.com/47903743/232872386-358182ba-9c9f-4438-ba66-e0917706c703.png" />
+</div>
 
 &nbsp; 
 
 - [x] Selecione AmazonS3FullAccess e clique em Next
-![7-selecionar-AmazonS3FullAccess](https://user-images.githubusercontent.com/47903743/232872444-bc438844-71b7-4e6e-a9f7-b02791cd646c.png)
+<div>
+< img src="https://user-images.githubusercontent.com/47903743/232872444-bc438844-71b7-4e6e-a9f7-b02791cd646c.png" />
+</div>
 
 &nbsp; 
 
 - [x] Clique em Create user  
-![8-create-user](https://user-images.githubusercontent.com/47903743/232872488-d83d5fbc-f194-41f6-8ca4-c90684789453.png)
+<div>
+< img src="https://user-images.githubusercontent.com/47903743/232872488-d83d5fbc-f194-41f6-8ca4-c90684789453.png" />
+</div>
 
 &nbsp; 
 
 - [x] Acesse o usuário terraform-pt-1
-![9-acesse-usuario-terraform](https://user-images.githubusercontent.com/47903743/232872539-324aefab-4a5e-4c01-ab90-84ec7eb4b6b7.png)
+<div>
+< img src="https://user-images.githubusercontent.com/47903743/232872539-324aefab-4a5e-4c01-ab90-84ec7eb4b6b7.png" />
+</div>
 
 &nbsp; 
 
 - [x] Clique em Security credentials
-![10-clique-security-credentials](https://user-images.githubusercontent.com/47903743/232872587-4e887b27-f688-4be8-b54e-1678076c7a8d.png)
+<div>
+< img src="https://user-images.githubusercontent.com/47903743/232872587-4e887b27-f688-4be8-b54e-1678076c7a8d.png" />
+</div>
 
 &nbsp; 
 
 - [x] Navegue até a seção Access keys e clique em Create access key
-![11-create-acess-key](https://user-images.githubusercontent.com/47903743/232872664-b622a2a8-a067-4049-aebd-320e8b29e2b0.png)
+<div>
+< img src="https://user-images.githubusercontent.com/47903743/232872664-b622a2a8-a067-4049-aebd-320e8b29e2b0.png" />
+</div>
 
 &nbsp; 
 
 - [x] Selecione Command Line Interface (CLI) e 'I understand the above recommendation and want to proceed to create an access key' e clique em Next.
-![12-selecione-cli](https://user-images.githubusercontent.com/47903743/232872707-8e846e64-4dfe-42a8-864c-143607228139.png)
+<div>
+< img src="https://user-images.githubusercontent.com/47903743/232872707-8e846e64-4dfe-42a8-864c-143607228139.png" />
+</div>
 
 &nbsp; 
 
 - [x] Clique em Create access key
-![13-crete-acess-key](https://user-images.githubusercontent.com/47903743/232872836-028068d7-d737-44f5-9de1-828dbb3023cc.png)
+<div>
+<img src="https://user-images.githubusercontent.com/47903743/232872836-028068d7-d737-44f5-9de1-828dbb3023cc.png" />
+</div>
 
 &nbsp; 
 
 - [x] Clique em Download .csv file
-![14-clique-download-csv-file](https://user-images.githubusercontent.com/47903743/232872884-18ffd4ae-240c-450d-9681-a863b5a9d415.png)
+<div>
+<img src="https://user-images.githubusercontent.com/47903743/232872884-18ffd4ae-240c-450d-9681-a863b5a9d415.png" />
+</div>
 
 &nbsp; 
 
 - [x] Após o download finalizar, clique em Done.
-![15-done](https://user-images.githubusercontent.com/47903743/232872937-ddb95377-fd9b-4f90-a98c-60d45a3cc767.png)
+<div>
+<img src="https://user-images.githubusercontent.com/47903743/232872937-ddb95377-fd9b-4f90-a98c-60d45a3cc767.png" />
+</div>
 
 &nbsp; 
 
 - [x] Com o download feito, renomeie o .csv para accessKeys.csv
-![16-renomeie](https://user-images.githubusercontent.com/47903743/232872980-453cf962-e40e-4bb5-937e-7fbca07f46c9.png)
+<div>
+<img src="https://user-images.githubusercontent.com/47903743/232872980-453cf962-e40e-4bb5-937e-7fbca07f46c9.png" />
+</div>
 
 &nbsp; 
 
@@ -120,7 +153,9 @@ directly.
 &nbsp; 
 
 - [x] Acessar a console da GCP e abrir o Cloud Shell
-![17-abrir-cloud-shell](https://user-images.githubusercontent.com/47903743/232873406-ae436c05-7839-446d-a770-dbbc4c1b2cc0.png)
+<div>
+<img src="https://user-images.githubusercontent.com/47903743/232873406-ae436c05-7839-446d-a770-dbbc4c1b2cc0.png" />
+</div>
 
 
 &nbsp; 
@@ -137,6 +172,7 @@ directly.
 
 - [x] Após fazer o upload, executar os comandos de preparação dos arquivos:
 
+
 <div style="margin: 8px 20px 0;">
   
 ```bash
@@ -152,7 +188,10 @@ chmod+x *.sh
 ```
 </div>
 
-![23-executar-comandos](https://user-images.githubusercontent.com/47903743/232873672-9c6a274e-00a7-46e9-8e4f-6923b3bf01a1.png)
+<div>
+<img src="https://user-images.githubusercontent.com/47903743/232873672-9c6a274e-00a7-46e9-8e4f-6923b3bf01a1.png" />
+</div>
+
 
 &nbsp; 
 
@@ -167,9 +206,6 @@ gcloud config set project<your-project-id>
 ```
 </div>
 
-<div>
-
-</div>
 
 - [x] Clique em Autorize e execute o comando abaixo para setar o projeto no Google
 Cloud Shell
@@ -183,7 +219,9 @@ Cloud Shell
 ```
 </div>
 
-![26-setar-projeto-no-gcs](https://user-images.githubusercontent.com/47903743/232877099-a0d8481e-5775-4d6f-b725-b80a1b1010ee.png)
+<div>
+<img src="https://user-images.githubusercontent.com/47903743/232877099-a0d8481e-5775-4d6f-b725-b80a1b1010ee.png" />
+</div>
 
 &nbsp; 
 
@@ -202,7 +240,9 @@ gcloud services enable sqladmin.googleapis.com
 ```
 </div>
 
-![27-habilitar-apis](https://user-images.githubusercontent.com/47903743/232877184-06431f8d-10bf-4ce9-8b78-2ec81aa4b68e.png)
+<div>
+<img src="https://user-images.githubusercontent.com/47903743/232877184-06431f8d-10bf-4ce9-8b78-2ec81aa4b68e.png" />
+</div>
 
 &nbsp; 
 
@@ -213,12 +253,16 @@ e atualizar o arquivo tcb_aws_storage.tf substituindo o nome do bucket(na linha 
 para um exclusivo (na AWS, os buckets precisam ter nomes únicos).
 
 - [x] Abra o Google Cloud Editor
-![28-abrir-editor](https://user-images.githubusercontent.com/47903743/232877316-df9ce7c8-e280-4e25-9739-a5c94561d2be.png)
+<div>
+<img src="https://user-images.githubusercontent.com/47903743/232877316-df9ce7c8-e280-4e25-9739-a5c94561d2be.png" />
+</div>
 
 &nbsp; 
 
 - [x] Substituir xxxx pelas iniciais do seu nome mais dois números. Exemplo: luxxy-covid-testing-system-pdf-pt-jr29
-![29-alterar-caracteres](https://user-images.githubusercontent.com/47903743/232877476-008cb1bb-c997-4727-bd22-90dadc8745e4.png)
+<div>
+<img src="https://user-images.githubusercontent.com/47903743/232877476-008cb1bb-c997-4727-bd22-90dadc8745e4.png" />
+</div>
 
 &nbsp; 
 
@@ -236,28 +280,41 @@ terraform apply
 ```
 </div>
 
-![31-provisionar-recursos-infra](https://user-images.githubusercontent.com/47903743/232877644-520a514c-4710-4472-b297-11caef8b305e.png)
+<div>
+<img src="https://user-images.githubusercontent.com/47903743/232877644-520a514c-4710-4472-b297-11caef8b305e.png" />
+</div>
 
 &nbsp;
 
 - [x] No console AWS, procurar por S3 para ver se o bucket foi criado
-![32-verificar-s3](https://user-images.githubusercontent.com/47903743/232877728-f51c005f-fc72-4455-9e48-f777fcf7d1e1.png)
+<div>
+<img src="https://user-images.githubusercontent.com/47903743/232877728-f51c005f-fc72-4455-9e48-f777fcf7d1e1.png" />
+</div>
 
 &nbsp;
   
 - [x] No console dp GCP, procurar por GKE e verificar se o cluester de kubernetes foi criado 
-![33-verificar-gke](https://user-images.githubusercontent.com/47903743/232877761-bc361fdf-808e-4799-b1f2-ac1152ce5025.png)
+<div>
+<img src="https://user-images.githubusercontent.com/47903743/232877761-bc361fdf-808e-4799-b1f2-ac1152ce5025.png" />
+</div>
+
 
 &nbsp;
 - [x] Ainda no console GCP, buscar por SQL e verificar a criação do banco de dados
-![35-clicar-instancia-cloudSql](https://user-images.githubusercontent.com/47903743/232879630-b376a4d2-c6b1-4718-98bb-83d0de510af4.png)
+<div>
+<img src="https://user-images.githubusercontent.com/47903743/232879630-b376a4d2-c6b1-4718-98bb-83d0de510af4.png" />
+</div>
+
 
 &nbsp;
 
 
 ### Configuração de Rede SQL
 - [x] Clique na sua instância do Cloud SQL.
-![35-clicar-instancia-cloudSql](https://user-images.githubusercontent.com/47903743/232877873-e421cc1a-b918-46c8-8deb-59835aa6dcd7.png)
+<div>
+<img src="https://user-images.githubusercontent.com/47903743/232877873-e421cc1a-b918-46c8-8deb-59835aa6dcd7.png" />
+</div>
+
 
 &nbsp;
   
