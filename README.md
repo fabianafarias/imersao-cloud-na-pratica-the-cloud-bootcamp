@@ -472,11 +472,7 @@ system-pdf-pt-xxxx" - name: S3_ACCESS_KEY value:
 
 
 - [x] Se conecte ao GKE (Google Kubernetes Engine) cluster via Console
-
-<div>
 <img width="500px" src="https://user-images.githubusercontent.com/47903743/232941971-7245fecb-7490-45e3-999f-4f197504bb48.png" />
-<img width="500px" src="https://user-images.githubusercontent.com/47903743/232941978-06750d19-d1cb-4bf9-a90a-8e1c99142ea5.png" />
-</div>
  
 
 &nbsp;
@@ -494,7 +490,6 @@ kubectl apply -f luxxy-covid-testing-system.yaml
 </div>
 
 <div>
-<img width="500px" src="https://user-images.githubusercontent.com/47903743/232942326-890a3467-f9a5-4c5c-9fb5-f86a619ac43e.png" />
 <img width="500px" src="https://user-images.githubusercontent.com/47903743/232942336-d9ad2c08-6293-4def-bfed-8ce7a1bba138.png" />
 <img width="500px" src="https://user-images.githubusercontent.com/47903743/232942338-2191bb2c-2230-425f-a889-175a8183b839.png" />
 </div>
