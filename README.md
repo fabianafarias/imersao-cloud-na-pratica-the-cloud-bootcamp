@@ -9,6 +9,8 @@
 <img width="400px" height="400px" src="https://user-images.githubusercontent.com/47903743/232590939-19a28e63-19fa-4919-b5c0-f529371527cf.png" />
 </div>
 
+&nbsp; 
+
 Durante a pandemia de Covid-19, uma rede de Hotéis e Resorts de luxo precisava identificar hóspedes infectados e armazenar os resultados dos exames para que pudessem ser acessados em todos os setores do hotel. A aplicação foi inicialmente colocada em um data center próprio, mas o aumento do número de hóspedes fez com que o data center não suportasse a demanda, deixando a aplicação lenta e atrasando o check-in.
 
 
@@ -161,11 +163,12 @@ directly.
 &nbsp; 
 
 - [x] Fazer o upload dos arquivos accessKeys.csv e mission1.zip para o Cloud Shell
+
 <div>
-<img width="500px" src="https://user-images.githubusercontent.com/47903743/232873457-2739fed8-41ed-4cb9-aa02-520eeb750ff1.png" />
-<img width="500px" src="https://user-images.githubusercontent.com/47903743/232873991-f1a12b51-9877-4954-a35f-b8bac42d99a9.png" />
-<img width="500px" src="https://user-images.githubusercontent.com/47903743/232873989-23f2cd90-0af6-47c8-b8c4-8b988dded5b4.png" />
-<img width="500px" src="https://user-images.githubusercontent.com/47903743/232873984-5d784467-1275-413e-b115-bcf11fd0226e.png" />
+<img src="https://user-images.githubusercontent.com/47903743/232873457-2739fed8-41ed-4cb9-aa02-520eeb750ff1.png" />
+<img src="https://user-images.githubusercontent.com/47903743/232873991-f1a12b51-9877-4954-a35f-b8bac42d99a9.png" />
+<img src="https://user-images.githubusercontent.com/47903743/232873989-23f2cd90-0af6-47c8-b8c4-8b988dded5b4.png" />
+<img src="https://user-images.githubusercontent.com/47903743/232873984-5d784467-1275-413e-b115-bcf11fd0226e.png" />
 </div>
 
 &nbsp; 
@@ -438,9 +441,9 @@ para o acesso ao banco de dados
 ### Google Cloud Platform (GCP)
 - [x] Navegue até a Cloud SQL instance e crie um novo usuário app com a senha welcome123456 no Cloud SQL MySQL database.
 <div>
-<img width="500px" src="https://user-images.githubusercontent.com/47903743/232940094-37460089-45da-4945-842c-37874abe08bc.png" />
-<img width="500px" src="https://user-images.githubusercontent.com/47903743/232940336-de25f23e-1730-43ea-804f-487d69a50ef8.png" />
-<img width="500px" src="https://user-images.githubusercontent.com/47903743/232940441-22a65554-c9ce-425b-a4d0-025fd3b81830.png" />
+<img src="https://user-images.githubusercontent.com/47903743/232940094-37460089-45da-4945-842c-37874abe08bc.png" />
+<img src="https://user-images.githubusercontent.com/47903743/232940336-de25f23e-1730-43ea-804f-487d69a50ef8.png" />
+<img src="https://user-images.githubusercontent.com/47903743/232940441-22a65554-c9ce-425b-a4d0-025fd3b81830.png" />
 </div>
 
 &nbsp;
@@ -574,6 +577,7 @@ system-pdf-pt-xxxx" - name: S3_ACCESS_KEY value:
 
 
 - [x] Se conecte ao GKE (Google Kubernetes Engine) cluster via Console
+  
   <div>
     <img src="https://user-images.githubusercontent.com/47903743/232941971-7245fecb-7490-45e3-999f-4f197504bb48.png" />
   </div>  
@@ -594,14 +598,15 @@ kubectl apply -f luxxy-covid-testing-system.yaml
 </div>
 
 <div>
-<img width="500px" src="https://user-images.githubusercontent.com/47903743/232942336-d9ad2c08-6293-4def-bfed-8ce7a1bba138.png" />
-<img width="500px" src="https://user-images.githubusercontent.com/47903743/232942338-2191bb2c-2230-425f-a889-175a8183b839.png" />
+<img src="https://user-images.githubusercontent.com/47903743/232942336-d9ad2c08-6293-4def-bfed-8ce7a1bba138.png" />
+<img src="https://user-images.githubusercontent.com/47903743/232942338-2191bb2c-2230-425f-a889-175a8183b839.png" />
 </div>
 
 &nbsp;
 
 
 - [x] Obtenha o IP Público e faça o teste da aplicação
+  
   <div>
   <img src="https://user-images.githubusercontent.com/47903743/232942692-00a77612-e738-4b1a-8fd5-cc8f74811ef0.png" />
   </div>
@@ -609,6 +614,7 @@ kubectl apply -f luxxy-covid-testing-system.yaml
 &nbsp;
 
 - [x] Você deve visualizar a aplicação up & running! Congrats!
+  
   <div>
   <img src="https://user-images.githubusercontent.com/47903743/232942800-a92f4021-b889-45e1-8e73-2c4e9b3f73c2.png" />
   </div>
@@ -618,7 +624,7 @@ kubectl apply -f luxxy-covid-testing-system.yaml
 
 __
 
-## Known issue during this step
+## Erro comum nesse passo
 
 ERROR: (gcloud.builds.submit) INVALID_ARGUMENT: could not resolve
 source: googleapi: Error 403:
@@ -638,6 +644,7 @@ clique em Edit principal;
 ou gcs. Selecione Storage Admin (Full control of GCS resources);
 6. Clique em Save and retorno para o Cloud Shell.
  
+__
 
  ## Migrando uma aplicação e seu banco de dados do "on-premises" para uma Arquitetura MultiCloud
 
@@ -734,6 +741,7 @@ exit;
 
 ### Amazon Web Services - Passos para a Migração dos arquivos PDF
 - [x] Conectar no AWS Cloud Shell
+    
   <div>
    <img src="https://user-images.githubusercontent.com/47903743/232943316-b0068bab-479e-4e11-9d90-e12a0e1b1bc0.png" />
   </div> 
@@ -792,6 +800,7 @@ aws s3 sync . s3://luxxy-covid-testing-system-pdf-pt-xxxx
 
 
 - [x] Testar a aplicação. Ao testar a aplicação e navegar na opção "Ver registros" você deverá ser capaz de visualizar os dados importados!
+    
     <div>
   <img src="https://user-images.githubusercontent.com/47903743/232943682-27d71c05-86e8-40ee-b915-e93a9086d21a.png" />
     </div>
@@ -801,15 +810,15 @@ aws s3 sync . s3://luxxy-covid-testing-system-pdf-pt-xxxx
 
 # Parabéns!🎉
     
-   <div>
-  ![gif-parabens](https://media.giphy.com/media/SITBfZCDrnsb0qQidj/giphy.gif)
-    </div>
+  ![gif-parabens](https://media.giphy.com/media/zfNAMCrhSQzte/giphy.gif)
 
 ### Você migrou uma aplicação e seu banco de dados do "on-premises" para uma Arquitetura MultiCloud!
 
 &nbsp; 
+    
+__    
 
-### Como deletar os recursos dos múltiplos provedores de Cloud
+# Como deletar os recursos dos múltiplos provedores de Cloud
 
 **Primeiro passo - Excluir todos os objetos do bucket**
 
