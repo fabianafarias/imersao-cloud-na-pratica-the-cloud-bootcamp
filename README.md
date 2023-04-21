@@ -646,7 +646,7 @@ ou gcs. Selecione Storage Admin (Full control of GCS resources);
  
 __
 
- ## Migrando uma aplicação e seu banco de dados do "on-premises" para uma Arquitetura MultiCloud
+ ## 3 - Migrando uma aplicação e seu banco de dados do "on-premises" para uma Arquitetura MultiCloud
 
 ### Google Cloud Platform - Passos para Migração do Banco de Dados MySQL
 - [x] Conectar ao Google Cloud Shell
